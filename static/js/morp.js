@@ -16,6 +16,7 @@ const config = {smoothness: 0.40};//Inicia >0 y <1
     /*const i = document.querySelector('canvas'); 
     i.setAttribute('width', '700px');
     i.setAttribute('height', '300px');*/
+    
     window.addEventListener(CY.modules().CAMERA.eventName, (event) => {//agregamos evento en evento
         console.log('New frame in input');                              // escucha camara
         const ctx = canvas.getContext('2d');//dos dimensiones con respecto a la imagen q se lee
