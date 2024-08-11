@@ -1,7 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from flask_mysqldb import MySQL,MySQLdb
 import js2py
+import os
+#
 
+
+#
 app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
@@ -26,6 +30,7 @@ def ingreso():
 def calculoEmociones():
     #code_2 = "function f() {return contHappy;}"
     #res_2 = js2py.eval_js(code_2)
+    os.system("python main.py")
     lista = []
     _feAngry = request.form['enviarAngry']
     _feDisgust = request.form['enviarDisgust']
